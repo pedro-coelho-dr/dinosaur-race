@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinosaur Race - Corrida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/race.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="game-header">
+    <h1>Dinosaur Race</h1>
+    <div class="header-controls">
+
+      <!-- Jogador  -->
+      <div class="player-turn">
+        <span class="turn-label">Jogador da vez</span>
+        <div id="currentPlayer" class="player-highlight">
+          Pedro <span class="dino-name">(Big Honker)</span>
+        </div>
+      </div>
+
+      <!-- Dado -->
+      <div class="dice-controls">
+        <button id="rollDice" class="btn-roll">🎲 Rolar Dado</button>
+        <span id="diceResult" class="dice-result">–</span>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="banner-box">
+      <div class="race-board">
+        <!-- Row 1 -->
+        <div class="cell" data-pos="1"></div>
+        <div class="cell" data-pos="2"></div>
+        <div class="cell" data-pos="3"></div>
+        <div class="cell checkpoint" data-pos="4" style="background-image:url('assets/4.webp')"></div>
+
+        <!-- Row 2 -->
+        <div class="cell checkpoint" data-pos="8" style="background-image:url('assets/8.webp')"></div>
+        <div class="cell" data-pos="7"></div>
+        <div class="cell" data-pos="6"></div>
+        <div class="cell" data-pos="5"></div>
+
+        <!-- Row 3 -->
+        <div class="cell" data-pos="9"></div>
+        <div class="cell" data-pos="10"></div>
+        <div class="cell" data-pos="11"></div>
+        <div class="cell checkpoint" data-pos="12" style="background-image:url('assets/12.jpg')"></div>
+
+        <!-- Row 4 -->
+        <div class="cell checkpoint" data-pos="16" style="background-image:url('assets/16.webp')"></div>
+        <div class="cell" data-pos="15"></div>
+        <div class="cell" data-pos="14"></div>
+        <div class="cell" data-pos="13"></div>
+
+        <!-- Row 5 -->
+        <div class="cell" data-pos="17"></div>
+        <div class="cell" data-pos="18"></div>
+        <div class="cell" data-pos="19"></div>
+        <div class="cell checkpoint" data-pos="20" style="background-image:url('assets/20.webp')"></div>
+      </div>
+    </div>
+
+    <!-- Ranking -->
+    <section class="ranking-box">
+      <h2>Ranking</h2>
+      <ul id="rankingList">
+        <!-- preenchido via JS -->
+      </ul>
+    </section>
+
+    
+
+    <!-- Botões -->
+    <div class="extra-buttons">
+      <button id="resetBtn" class="btn-secondary">Reset</button>
+      <button id="exitBtn" class="btn-secondary">Sair</button>
+    </div>
+
+    <!-- Log -->
+    <section class="log-box">
+      <h2>Log</h2>
+      <div id="logContainer"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/pages/race.js"></script>
+</body>
+</html>

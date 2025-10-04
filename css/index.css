@@ -1,0 +1,138 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  background-color: #121212;
+}
+
+header {
+  background: #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;
+  color: #ffd24c;
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.banner-box {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 1000 / 646;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
+}
+
+.banner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+
+/* Players */
+.players {
+  margin-bottom: 15px;
+}
+
+.players label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.players select {
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Botão */
+.btn {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #ffd24c;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #000;
+}
+
+.btn:hover {
+  background: #ffb300;
+  transform: scale(1.05);
+}
+
+/* Texto */
+.intro {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+  max-width: 800px;
+  margin: 30px auto;
+  font-style: italic;
+}
+
+/* Mapa */
+.lore-image {
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #000;
+}
+
+.lore-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Créditos */
+.credits {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+}
+

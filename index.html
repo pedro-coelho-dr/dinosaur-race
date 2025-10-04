@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinosaur Race</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <h1>Dinosaur Race</h1>
+  </header>
+
+  <main class="main-content">
+    <div class="banner-box">
+      <img src="assets/banner.png" alt="Banner Dinosaur Race">
+      
+      <div class="banner-overlay">
+        <div class="players">
+          <label for="numPlayers">Jogadores:</label>
+          <select id="numPlayers">
+            <option value="1">1 Jogador</option>
+            <option value="2">2 Jogadores</option>
+            <option value="3">3 Jogadores</option>
+            <option value="4">4 Jogadores</option>
+            <option value="5">5 Jogadores</option>
+            <option value="6">6 Jogadores</option>
+          </select>
+        </div>
+        <button class="btn" onclick="startGame()">Iniciar</button>
+      </div>
+    </div>
+
+    <p class="intro">
+      Tambores ecoam por <strong>Port Nyanzaru</strong>, a joia tropical de Chult.  
+      Multidões se acotovelam nas varandas coloridas, apostando suas últimas moedas enquanto os Príncipes Mercantes observam das alturas.  
+      Sob o sol escaldante, dinossauros pintados com padrões tribais rugem na linha de partida — o sinal é dado, e o caos toma as ruas.
+    </p>
+
+
+
+    <div class="lore-image">
+      <img src="assets/port-tour.webp" alt="Vista de Port Nyanzaru">
+    </div>
+
+    <footer class="credits">
+      <p>Dinosaur Race © Pedro Coelho 2025 – CESAR School</p>
+      <p>Inspirado em Tomb of Annihilation (2017), uma aventura oficial de Dungeons & Dragons ambientada em Chult</p>
+    </footer>
+
+  </main>
+
+  <script type="module" src="js/pages/index.js"></script>
+</body>
+</html>
