@@ -83,8 +83,8 @@ function logEvent(message) {
 
 // RANKING
 function updateRanking() {
-  const list = document.getElementById("rankingList");
-  if (!list) return;
+  const tbody = document.getElementById("rankingList");
+  if (!tbody) return;
 
   const ranked = [...game.players].sort((a, b) => {
     const dinoA = game.dinos.find(d => d.owner === a.id);
@@ -99,32 +99,32 @@ function updateRanking() {
     return (dinoB?.pos || 0) - (dinoA?.pos || 0);
   });
 
-  list.innerHTML = ranked.map((p, i) => {
+  tbody.innerHTML = ranked.map((p, i) => {
     const dino = game.dinos.find(d => d.owner === p.id);
     const pos = dino?.pos || 0;
     const icon = game.finishOrder.includes(p.id) ? "🏁" : "";
-    const bet = p.bet || 0;
     const profit = p.profit ?? null;
 
-    // Aposta
     let profitColor = "#ccc";
-    let profitText = "";
+    let profitText = "-";
     if (profit !== null && !p.isBot) {
       if (profit > 0) profitColor = "#00ff9d";
       else if (profit < 0) profitColor = "#ff5555";
-      profitText = ` <span style="color:${profitColor}">(${profit >= 0 ? "+" : ""}${profit.toFixed(0)})</span>`;
+      profitText = `<span style="color:${profitColor}">${profit > 0 ? "+" : ""}${profit.toFixed(0)}</span>`;
     }
 
     return `
-      <li style="color:${getPlayerColor(p.id)}">
-        ${icon} <strong>${i + 1}º</strong> ${p.name}
-        <span style="color:#fff;">(${dino?.label || "???"})</span> —
-        <span style="color:#ffd24c;">Casa ${pos}</span>
-        ${profitText}
-      </li>
+      <tr>
+        <td>${icon} <strong>${i + 1}º</strong></td>
+        <td style="color:${getPlayerColor(p.id)}">${p.name}</td>
+        <td>${dino?.label || "???"}</td>
+        <td style="color:#ffd24c;">${pos}</td>
+        <td>${profitText}</td>
+      </tr>
     `;
   }).join("");
 }
+
 
 
 // LÓGICA DE TURNO
